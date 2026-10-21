@@ -10,6 +10,10 @@ process.env.NODE_ENV = 'test';
 process.env.TZ = 'UTC';
 Settings.defaultLocale = 'en-US';
 
+vi.mock('../../../ui/src/assets/logo-icon-on-black.png', () => ({
+  default: '/test-assets/oyster-logo.png',
+}));
+
 setupDomMocks();
 
 // Silences react's pointless warning spam
